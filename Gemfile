@@ -29,6 +29,7 @@ gem 'spring',        group: :development
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'httparty'
+gem 'rails_12factor'
 gem 'pg' , group: :production
 
 # Use ActiveModel has_secure_password
