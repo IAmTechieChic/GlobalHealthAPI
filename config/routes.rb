@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :districts
+
   root 'pages#index'
 
   get 'pages/about'

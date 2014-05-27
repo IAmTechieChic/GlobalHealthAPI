@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @district.source_id %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @district.country %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @district.region %>
+</p>
+
+<p>
+  <strong>District:</strong>
+  <%= @district.district %>
+</p>
+
+<p>
+  <strong>Shapefile:</strong>
+  <%= @district.shapefile %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @district.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @district.longitude %>
+</p>
+
+<%= link_to 'Edit', edit_district_path(@district) %> |
+<%= link_to 'Back', districts_path %>
