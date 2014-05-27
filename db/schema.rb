@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140527144236) do
+ActiveRecord::Schema.define(version: 20140527175506) do
 
   create_table "districts", force: true do |t|
     t.integer  "source_id"
@@ -23,6 +23,9 @@ ActiveRecord::Schema.define(version: 20140527144236) do
     t.float    "longitude"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "country_id"
+    t.integer  "region_id"
+    t.integer  "district_id"
   end
 
   create_table "users", force: true do |t|
