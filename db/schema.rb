@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140527175506) do
+ActiveRecord::Schema.define(version: 20140528141316) do
 
   create_table "districts", force: true do |t|
     t.integer  "source_id"
@@ -26,6 +26,10 @@ ActiveRecord::Schema.define(version: 20140527175506) do
     t.integer  "country_id"
     t.integer  "region_id"
     t.integer  "district_id"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   create_table "users", force: true do |t|
