@@ -1,3 +1,4 @@
+<h1>Show Districts</h1>
 <table class="table">
 	<tr>
 		<th>Country</th>
@@ -8,11 +9,14 @@
 
 <% @districts.each do |district| %>
 	 <tr>
-	 	<td><%= district.country%></td>
-	 	<td><%= district.region%></td>
-	 	<td><%= district.district%></td>
-	 	<td></td>
-		<% end %>
+	 	<td><%= district.country %></td>
+	 	<td><%= district.region %></td>
+	 	<td><%= district.district %></td>
+	 	<td>
+	 		<% unless district.avatar.blank? %>
+	 			<%= image_tag district.avatar.url(:thumb) %>
+	 		<% end %>
+	 	</td>
 	 </tr>
 <%end%>
 </table>
