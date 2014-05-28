@@ -1,6 +1,5 @@
 class ApiController < ApplicationController
 	
-
 	def index
 		@response = Api.http_response
 

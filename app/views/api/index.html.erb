@@ -1,1 +1,8 @@
-index.html.erb
+<div><% @results.each do |result| %>
+	admin0: <%= result['admin0'] %><br/>
+	admin1: <%= result['admin1'] %><br/>
+	admin2: <%= result['admin2'] %><br/>
+	admin3: <%= result['admin3'] %><br/>
+	search: <%= result['search'] %><br/>
+
+<% end %>
