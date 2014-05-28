@@ -2,7 +2,7 @@ class District < ActiveRecord::Base
 
 	def self.parse_response(response)
 		response.each do |data|
-			find_create_DistrictRecord(
+			first_or_create_DistrictRecord(
 							data['admin0id'],
 							data['admin0'],
 							data['admin1d'],
@@ -15,7 +15,7 @@ class District < ActiveRecord::Base
 
 	private
 
-	def self.find_create_DistrictRecord(countryid, country, regionid, region, districtid, district)
+	def self.first_or_create_DistrictRecord(countryid, country, regionid, region, districtid, district)
 		District.where(
 				:country_id => countryid,
 				:country => country,

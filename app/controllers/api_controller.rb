@@ -3,7 +3,8 @@ class ApiController < ApplicationController
 		@response = Api.http_response
 		
 		#parse and save districts
-		@district = District.parse_response(@response.parsed_response)
+		District.parse_response(@response.parsed_response)
 
+		@districts = District.all
 	end
 end
