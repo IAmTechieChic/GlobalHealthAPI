@@ -12,6 +12,16 @@ class District < ActiveRecord::Base
 			end
 	end
 
+	def self.get_districts
+
+	end
+
+	def self.get_countries
+	
+	end
+
+	def self.get_regions
+	end
 
 	private
 
