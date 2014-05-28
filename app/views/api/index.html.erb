@@ -1,1 +1,17 @@
+<table class="table">
+	<tr>
+		<th>Country</th>
+		<th>Region</th>
+		<th>District</th>
+		<th>ShapeFile</th>
+	</tr>
 
+<% @districts.each do |district| %>
+	 <tr>
+	 	<td><%= district.country%></td>
+	 	<td><%= district.region%></td>
+	 	<td><%= district.district%></td>
+	 	<td></td>
+	 </tr>
+<%end%>
+</table>
