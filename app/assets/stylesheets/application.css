@@ -23,3 +23,11 @@
 	margin-bottom: 200px;
 }
 
+.navbar-inverse {
+	background-color: white;
+}
+
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
+	color: black;
+}
+
