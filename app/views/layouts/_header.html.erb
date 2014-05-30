@@ -15,12 +15,14 @@
             <li><a href="#about">About</a></li>
             <li><a href="#apis">APIs</a></li>-->
           </ul>
+          <p class="navbar-text navbar-right"> <% if user_signed_in? %>
+            You are logged in as <%= current_user.email %> | <%= link_to 'Update Districts', districts_path %> |
+            <%= link_to "Sign out",destroy_user_session_path, method: :delete, class: "button" %>
+          <% end %>
+          </p>
           
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
     </div><!-- /.navbar -->
 
-    <% if user_signed_in? %>
-            <p>You are logged in as <%= current_user.email %> | <%= link_to 'Update Districts', districts_path %> |
-            <%= link_to "Sign out",destroy_user_session_path, method: :delete, class: "button" %></p>
-          <% end %>
+   

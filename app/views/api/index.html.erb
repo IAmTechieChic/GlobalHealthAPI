@@ -14,7 +14,7 @@
 	 	<td><%= district.district %></td>
 	 	<td>
 	 		<% unless district.avatar.blank? %>
-	 			<%= image_tag district.avatar.url(:thumb) %>
+	 			<%= link_to (image_tag district.avatar.url(:thumb)), district.avatar.url %>
 	 		<% end %>
 	 	</td>
 	 </tr>
