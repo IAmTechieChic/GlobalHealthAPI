@@ -28,10 +28,6 @@
     <%= f.text_field :district %>
   </div>
   <div class="field">
-    <%= f.label :shapefile %><br>
-    <%= f.text_field :shapefile %>
-  </div>
-  <div class="field">
     <%= f.label :latitude %><br>
     <%= f.text_field :latitude %>
   </div>
@@ -41,6 +37,9 @@
   </div>
   <div class="field">
     <label>Shapefile</label>
+    <% unless @district.avatar.blank? %>
+        <%= link_to (image_tag @district.avatar.url(:thumb)), @district.avatar.url %>
+    <% end %>
     <%= f.file_field :avatar %>
   </div>
   <div class="actions">
