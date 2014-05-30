@@ -29,7 +29,7 @@ gem 'spring',        group: :development
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'httparty'
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
 gem 'pg' , group: :production
 
 gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
