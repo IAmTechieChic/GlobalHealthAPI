@@ -14,3 +14,12 @@
  *= require_self
  */
 
+.jumbotron {
+    background-color: white;
+  }
+
+.jumbotron img {
+	float: left;
+	margin-bottom: 200px;
+}
+
