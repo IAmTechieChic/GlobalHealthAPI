@@ -32,6 +32,14 @@
               <%= f.label :longitude %><br>
               <%= f.text_field :longitude, :class => "form-control"  %>
             </div>
+            <div>
+                <%= f.label :gadmid %><br>
+                <%= f.text_field :gadmid %>
+              </div>
+              <div class="field">
+                <%= f.label :salbid %><br>
+                <%= f.text_field :salbid %>
+            </div>
             <div class="field">
               <label>Shapefile:</label><br/>
               <% unless @district.avatar.blank? %>
@@ -45,5 +53,6 @@
             </div>
           <% end %>
         </div>
+
 
  
