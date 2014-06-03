@@ -1,37 +1,43 @@
 <p id="notice"><%= notice %></p>
+ <div class="container-fluid">
+  <div class="row">
 
-<p>
-  <strong>Source:</strong>
-  <%= @district.source_id %>
-</p>
+    <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-default">
+        <div class="panel-body">
+         
+            <!-- <strong>Country:</strong>-->
+           <h2><%= @district.country %> - <%= @district.region %> -  <%= @district.district %></h2>
+          
+<!--
+          
+           <strong>Region:</strong>
+           <h2><%= @district.region %></h2>
+         
 
-<p>
-  <strong>Country:</strong>
-  <%= @district.country %>
-</p>
+          
+            <strong>District:</strong>
+          <h3> <%= @district.district %></h3> --> 
 
-<p>
-  <strong>Region:</strong>
-  <%= @district.region %>
-</p>
+          <p>
+            <strong>Latitude:</strong>
+            <%= @district.latitude %>
+          </p>
 
-<p>
-  <strong>District:</strong>
-  <%= @district.district %>
-</p>
-<p>
-  <strong>Latitude:</strong>
-  <%= @district.latitude %>
-</p>
+          <p>
+            <strong>Longitude:</strong>
+            <%= @district.longitude %>
+          </p>
 
-<p>
-  <strong>Longitude:</strong>
-  <%= @district.longitude %>
-</p>
-
-<p>
-  <strong>Shapefile:</strong>
-  <%= image_tag @district.avatar.url %>
-</p>
-<%= link_to 'Edit', edit_district_path(@district) %> |
-<%= link_to 'Back', districts_path %>
+          <p>
+            <strong>Shapefile:</strong>
+            <%= image_tag @district.avatar.url %>
+          </p>
+          
+          <p align="center"><%= link_to 'Edit', edit_district_path(@district) %> |
+          <%= link_to 'Back', districts_path %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
