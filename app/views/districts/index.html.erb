@@ -7,9 +7,12 @@
       <th>Country</th>
       <th>Region</th>
       <th>District</th>
+      <th>GADMID</th>
+      <th>SALBID</th>
       <th>Shapefile</th>
       <th>Latitude</th>
       <th>Longitude</th>
+      <th>Display</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,12 +24,15 @@
         <td><%= district.country %></td>
         <td><%= district.region %></td>
         <td><%= district.district %></td>
+        <td><%= district.gadmid %></td>
+        <td><%= district.salbid %></td>
         <td>
           <% unless district.avatar.blank? %>
             <%= link_to (image_tag district.avatar.url(:thumb)), district.avatar.url %>
         <% end %></td>
         <td><%= district.latitude %></td>
         <td><%= district.longitude %></td>
+        <td><%= district.Display_n %></td>
         <td><%= link_to 'Show', district %></td>
         <td><%= link_to 'Edit', edit_district_path(district) %></td>
         <td><%= link_to 'Destroy', district, method: :delete, data: { confirm: 'Are you sure?' } %></td>

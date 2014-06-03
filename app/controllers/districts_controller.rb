@@ -28,6 +28,8 @@ class DistrictsController < ApplicationController
   def create
     @district = District.new(district_params)
 
+  
+
     respond_to do |format|
       if @district.save
         format.html { redirect_to @district, notice: 'District was successfully created.' }
@@ -56,12 +58,14 @@ class DistrictsController < ApplicationController
   # DELETE /districts/1
   # DELETE /districts/1.json
   def destroy
-    @district.destroy
+    @district.destroy 
     respond_to do |format|
       format.html { redirect_to districts_url, notice: 'District was successfully destroyed.' }
       format.json { head :no_content }
-    end
+    end 
+   
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -71,6 +75,6 @@ class DistrictsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def district_params
-      params.require(:district).permit(:source_id, :country, :region, :district, :shapefile, :latitude, :longitude, :avatar)
+      params.require(:district).permit(:source_id, :country, :region, :district, :gadmid, :salbid, :shapefile, :latitude, :longitude, :avatar, :Display_n)
     end
 end

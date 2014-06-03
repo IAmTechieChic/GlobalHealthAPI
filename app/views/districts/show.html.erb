@@ -19,6 +19,17 @@
   <strong>District:</strong>
   <%= @district.district %>
 </p>
+
+<p>
+  <strong>GADMID:</strong>
+  <%= @district.gadmid %>
+</p>
+
+<p>
+  <strong>SALBID:</strong>
+  <%= @district.salbid %>
+</p>
+
 <p>
   <strong>Latitude:</strong>
   <%= @district.latitude %>
@@ -33,5 +44,11 @@
   <strong>Shapefile:</strong>
   <%= image_tag @district.avatar.url %>
 </p>
+
+<p>
+  <strong>Display</strong>
+  <%= @district.Display_n %>
+</p>
+
 <%= link_to 'Edit', edit_district_path(@district) %> |
 <%= link_to 'Back', districts_path %>

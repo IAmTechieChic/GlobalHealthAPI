@@ -12,6 +12,7 @@
 	 	<td><%= district.country %></td>
 	 	<td><%= district.region %></td>
 	 	<td><%= district.district %></td>
+	 	<td><%= district.gadmid %></td>
 	 	<td>
 	 		<% unless district.avatar.blank? %>
 	 			<%= link_to (image_tag district.avatar.url(:thumb)), district.avatar.url %>
