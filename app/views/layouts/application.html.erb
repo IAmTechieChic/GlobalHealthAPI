@@ -2,20 +2,17 @@
 <html>
 <head>
   <title>GlobalHealthAPI</title>
-  		<link rel="shortcut icon" type="image/png" href="https://lh5.ggpht.com/D9_wDvOYnJfwKz_ZIxdU4aGBlxP9brXEmnRKD72zkZOQFxAubh7RLPeZnjsZcb4EtA=w170" />
+  <link rel="shortcut icon" type="image/png" href="https://lh5.ggpht.com/D9_wDvOYnJfwKz_ZIxdU4aGBlxP9brXEmnRKD72zkZOQFxAubh7RLPeZnjsZcb4EtA=w170" />
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 
 <body>
-	<style>
-		body{ background: url('http://www.logosol.com/select-your-location/images/bg_global_map.png') no-repeat; }
-	</style>
-
-<%= render "layouts/header" %>
-<%= yield %>
-
-<%= render "layouts/bootstrap_footer" %>
-</body>
+	<div id="bg">
+			<%= render "layouts/header" %>
+			<%= yield %>
+			<%= render "layouts/bootstrap_footer" %>
+		</div>
+	</body>
 </html>
