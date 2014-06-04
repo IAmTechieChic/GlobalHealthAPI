@@ -34,6 +34,11 @@ gem 'pg' , group: :production
 
 gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
 
+gem 'gmaps4rails'
+
+gem 'geokit-rails'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
