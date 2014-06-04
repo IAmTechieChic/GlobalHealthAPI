@@ -90,8 +90,6 @@ footer {
 
 #map-canvas {
 	height: 500px;
-/*	-moz-transform:none!important;
-	-webkit-transform: none!important;*/
 }
 
 .thumbnail {
@@ -101,3 +99,4 @@ footer {
 table, th, td {
 	border:0!important;
 }
+

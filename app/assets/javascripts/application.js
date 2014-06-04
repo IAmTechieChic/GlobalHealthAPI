@@ -16,54 +16,49 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function(){
-      	var myLatlng = new google.maps.LatLng(-33.890542, 151.274856);
-        var mapOptions = {
-          center: myLatlng,
-          scrollwheel: false,
-          zoom: 11
-        };
-        var map = new google.maps.Map(document.getElementById("map-canvas"),
-            mapOptions);
+$(document).ready(function (){
 
-        var locations = [
-		        ['Bondi Beach', -33.890542, 151.274856, 4],
-		        ['Coogee Beach', -33.923036, 151.259052, 5],
-		        ['Cronulla Beach', -34.028249, 151.157507, 3],
-		        ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
-		        ['Maroubra Beach', -33.950198, 151.259302, 1]
-		    ];
+    var myLatLng = new google.maps.LatLng(12.3333, 1.6667);
 
-        var marker, i;
+    var mapOptions = {
+    zoom: 7,
+    center:myLatLng
+     };
 
-         for (i = 0; i < locations.length; i++) {
-       		marker = new google.maps.Marker({
-            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-            map: map
-       	 });
+     var map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
 
-        google.maps.event.addListener(marker, 'click', (function (marker, i) {
-            return function () {
-                infowindow.setContent(locations[i][0]);
-                infowindow.open(map, marker);
-            }
-        })(marker, i));
-    }
+     var locations = [
+      ['Toma', 12.7667, -2.8833, 1],
+      ['Nouna', 12.7333, -3.8667, 2],
+      ['Adansi South', 6.30, -1.50, 3],
+      ['Adansi North', 6.2833, -1.5167, 4]
+    ];
+    
+    var marker, i;
 
-  //       var marker = new google.maps.Marker({
-		//     position: myLatlng,
-		//     map: map,
-		//     title:"Hello World!"
-		// });
-
-    //       var contentString = '<p>Hey guys, I&rsquo;m in Atlanta!</p>';
-
-		  // var infowindow = new google.maps.InfoWindow({
-		  //     content: contentString
-		  // });
-
-		  // google.maps.event.addListener(marker, 'click', function() {
-		  //   infowindow.open(map,marker);
-		  // });
-
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
       });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+}
+    // var contentString = "<b>Hi guys</b>";
+
+    // var infowindow = new google.maps.InfoWindow({
+    //   content: contentString
+    //     });
+
+    // google.maps.event.addListener(marker, 'click', function() {
+    // infowindow.open(map,marker);
+    //     });
+
+
+});
