@@ -6,7 +6,9 @@ class DistrictsController < ApplicationController
   # GET /districts
   # GET /districts.json
   def index
-    @districts = District.all
+    # @districts = District.all
+    @country = params[:country].titleize
+    @districts = District.where(:country => @country)
   end
 
   # GET /districts/1
@@ -27,8 +29,6 @@ class DistrictsController < ApplicationController
   # POST /districts.json
   def create
     @district = District.new(district_params)
-
-  
 
     respond_to do |format|
       if @district.save

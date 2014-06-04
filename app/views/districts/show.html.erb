@@ -1,23 +1,11 @@
-<p id="notice"><%= notice %></p>
+<p id="notice" class="success"><%= notice %></p>
  <div class="container-fluid">
   <div class="row">
 
     <div class="col-md-6 col-md-offset-3">
       <div class="panel panel-default">
         <div class="panel-body">
-         
-            <!-- <strong>Country:</strong>-->
-           <h2><%= @district.country %> - <%= @district.region %> -  <%= @district.district %></h2>
-          
-<!--
-          
-           <strong>Region:</strong>
-           <h2><%= @district.region %></h2>
-         
-
-          
-            <strong>District:</strong>
-          <h3> <%= @district.district %></h3> --> 
+             <h2><%= @district.country %> - <%= @district.region %> -  <%= @district.district %></h2>
 
           <p>
             <strong>Latitude:</strong>
@@ -35,10 +23,12 @@
             <strong>SALBID:</strong>
             <%= @district.salbid %>
           </p>
-          <p>
+
+
+      <!--     <p>
             <strong>Shapefile:</strong>
             <%= image_tag @district.avatar.url %>
-          </p>
+          </p> -->
           
           <p align="center"><%= link_to 'Edit', edit_district_path(@district) %> |
           <%= link_to 'Back', districts_path %></p>
@@ -47,3 +37,4 @@
     </div>
   </div>
 </div>
+

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get 'pages/about'
   get 'api/index'
+  get 'pages/map'
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

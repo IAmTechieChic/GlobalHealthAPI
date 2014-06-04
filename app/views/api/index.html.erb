@@ -1,4 +1,4 @@
-<h1>Show Districts</h1>
+<!-- <h1>Show Districts</h1>
 <table class="table">
 	<tr>
 		<th>Country</th>
@@ -20,4 +20,46 @@
 	 	</td>
 	 </tr>
 <%end%>
-</table>
+</table> -->
+
+ <div class="row">
+
+<h1>Show All Districts</h1>
+<p>This data is pulling directly from the API</p>
+<div class="col-sm-12 col-md-12">
+      <table class="table">
+          <tr>
+          	<th><h5>Country</h5></th>
+            <th><h5>Region</h5></th>
+            <th><h5>District</h5></th>
+            <th><h5>Shapefile</h5></th>
+            <th><h5>Latitude</h5></th>
+            <th><h5>Longitude</h5></th>
+            <th><h5>GADMID:</h5></th>
+            <th><h5>SALBID</h5></th>
+          </tr>
+         
+
+          <% @districts.each do |district| %>
+                  <tr>   
+                  	  <td><h2><%= district.country %></h2></td>
+                      <td><h2><%= district.region %></h2></td>
+                      <td><h2><%= district.district %></h2>
+                     </td>  
+                      <td>
+                          <% unless district.avatar.blank? %>
+                            <p>
+                              <%= link_to (image_tag district.avatar.url(:thumb)), district.avatar.url %>
+                            </p> 
+                          <% end %>
+                      </td>    
+                      <td><h2><%= district.latitude %></h2></td>
+                      <td><h2><%= district.longitude %></h2></td>                
+                      <td><h2><%= district.gadmid %></h2></td>
+                      <td><h2><%= district.salbid %></h2></td> 
+                   </tr>
+              <% end %>
+         </table>
+      </div>
+  </div>
+   

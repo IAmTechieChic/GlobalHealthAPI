@@ -1,24 +1,83 @@
-  <div class="row">
-          <% @districts.each do |district| %>
-           <div class="col-sm-6 col-md-6">
-                <div class="thumbnail">
 
-                  <h2><%= district.country %> - <%= district.region %> - <%= district.district %></h2>
-                   <p>
-                      <% unless district.avatar.blank? %>
-                        <%= link_to (image_tag district.avatar.url(:thumb)), district.avatar.url %>
-                    <% end %>
-                  </p>
-            
-                  <p><b>Latitude:</b> <%= district.latitude %></p>
-                  <p><b>Longitude:</b> <%= district.longitude %></p>
-                  <p><b>GADMID:</b> <%= district.gadmid %></p>
-                  <p><b>SALBID</b> <%= district.salbid %></p>
-                  <p align="center"><%= link_to 'Show', district %> | <%= link_to 'Edit', edit_district_path(district) %> | <%= link_to 'Destroy', district, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-               </div> 
-              </div>  
-          <% end %>
+  <div class="row">
+
+      <div class="col-sm-6 col-md-6">
+          <h1><%= @country %></h1>
+          <p>This data is pulling from our database.</p>
+      </div>
+      <div class="col-sm-6 col-md-6">
+          <br/><br/><p align="right"><%= link_to 'Add New District', new_district_path, :class => 'btn btn-warning' %></p>          
+      </div>
+    </div>
+    <div class="row">
+     <div class="col-sm-12 col-md-12">
+          <table class="table table-striped">
+              <tr>
+                <th><h5>Region</h5></th>
+                <th><h5>District</h5></th>
+                <th><h5>Shapefile</h5></th>
+                <th><h5>Latitude</h5></th>
+                <th><h5>Longitude</h5></th>
+                <th><h5>GADMID:</h5></th>
+                <th><h5>SALBID</h5></th>
+              </tr>
+             
+
+              <% @districts.each do |district| %>
+                      <tr>   
+                          <td><h2><%= district.region %></h2></td>
+                          <td><h2><%= district.district %></h2>
+                           <%= link_to 'Show', district %> | <%= link_to 'Edit', edit_district_path(district) %> | <%= link_to 'Destroy', district, method: :delete, data: { confirm: 'Are you sure?' } %>
+                         </td>  
+                          <td>
+                              <% unless district.avatar.blank? %>
+                                <p>
+                                  <%= link_to (image_tag district.avatar.url(:thumb)), district.avatar.url %>
+                                </p> 
+                              <% end %>
+                          </td>    
+                          <td><h2><%= district.latitude %></h2></td>
+                          <td><h2><%= district.longitude %></h2></td>                
+                          <td><h2><%= district.gadmid %></h2></td>
+                          <td><h2><%= district.salbid %></h2></td> 
+                       </tr>
+                  <% end %>
+             </table>
+          </div> 
     </div>
 <br>
+<div class="row">
+  <div class="col-sm-12 col-md-12">
+    <p align="right"><%= link_to 'Add New District', new_district_path, :class => 'btn btn-warning' %></p>
+  </div>
+</div>
 
-<%= link_to 'New District', new_district_path %>
+ <script type="text/javascript">
+//   $(document).ready(function(){
+
+//     <% @districts.each do |district| %>
+
+//       <% if district.latitude != nil && district.longitude != nil %>
+//           var lat = <%= district.latitude %>;
+//           var lon = <%= district.longitude %>;
+//           var myLatlng = new google.maps.LatLng(lat,lon);
+
+//               var mapOptions = {
+//                 zoom: 5,
+//                 center: myLatlng
+//               };
+
+//               var map = new google.maps.Map(document.getElementById("map-canvas"),
+//                   mapOptions);  
+
+//               // To add the marker to the map, use the 'map' property
+//           var marker = new google.maps.Marker({
+//             position: myLatlng,
+//             map: map,
+//             title: '<%= district.district %>'
+//           });
+//         <% end %>
+//       <% end %>
+//     });
+ 
+// </script>
