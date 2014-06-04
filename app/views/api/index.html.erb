@@ -1,32 +1,10 @@
-<!-- <h1>Show Districts</h1>
-<table class="table">
-	<tr>
-		<th>Country</th>
-		<th>Region</th>
-		<th>District</th>
-		<th>ShapeFile</th>
-	</tr>
-
-<% @districts.each do |district| %>
-	 <tr>
-	 	<td><%= district.country %></td>
-	 	<td><%= district.region %></td>
-	 	<td><%= district.district %></td>
-	 	<td><%= district.gadmid %></td>
-	 	<td>
-	 		<% unless district.avatar.blank? %>
-	 			<%= link_to (image_tag district.avatar.url(:thumb)), district.avatar.url %>
-	 		<% end %>
-	 	</td>
-	 </tr>
-<%end%>
-</table> -->
 
  <div class="row">
-
-<h1>Show All Districts</h1>
-<p>This data is pulling directly from the API</p>
-<div class="col-sm-12 col-md-12">
+ 	<div class="col-sm-6 col-md-6">
+         <h1>Show All Districts</h1>
+		<p>This data is pulling directly from the API</p>
+    </div>
+	<div class="col-sm-12 col-md-12">
       <table class="table">
           <tr>
           	<th><h5>Country</h5></th>

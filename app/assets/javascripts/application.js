@@ -18,10 +18,11 @@
 
 $(document).ready(function (){
 
-    var myLatLng = new google.maps.LatLng(12.3333, 1.6667);
+    var myLatLng = new google.maps.LatLng(10.7833, -0.8500);
 
     var mapOptions = {
-    zoom: 7,
+    zoom: 6,
+    scrollwheel: false,
     center:myLatLng
      };
 
@@ -32,7 +33,15 @@ $(document).ready(function (){
       ['Toma', 12.7667, -2.8833, 1],
       ['Nouna', 12.7333, -3.8667, 2],
       ['Adansi South', 6.30, -1.50, 3],
-      ['Adansi North', 6.2833, -1.5167, 4]
+      ['Adansi North', 6.2833, -1.5167, 4],
+      ['Tenkodogo', 11.7833, -0.3667, 5],
+      ['Diébougou', 10.9667, -3.2500, 6],
+      ['Obuasi Municipal', 6.2000, -1.6833, 7],
+      ['Asutifi', 6.9833, -2.3833, 8],
+      ['Tougouri', 13.3153, -0.5181, 9],
+      ['Kintampo North', 8.0533, -1.7269, 10],
+      ['Sunyani West', 7.3667, -2.3167, 11]
+
     ];
     
     var marker, i;

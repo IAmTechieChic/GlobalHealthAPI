@@ -1,26 +1,29 @@
-<div class="col-xs-12 col-sm-9">
-          
-          <div class="row">
-           
-            <div class="col-6 col-sm-6 col-lg-4">
+ <div class="container-fluid">
+  <div class="row">
+
+    <div class="col-md-4 col-md-offset-4">
+      <div class="panel panel-default">
+        <div class="panel-body">
+
               	  <h2>Sign in</h2>
+              	  	<p>Please sign in below with your administrator email and password.</p>
 
 						<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 						  <div><%= f.label :email %><br />
-						  <%= f.email_field :email, autofocus: true %></div>
+						  <%= f.email_field :email, autofocus: true, :class => "form-control"  %></div>
 
 						  <div><%= f.label :password %><br />
-						    <%= f.password_field :password, autocomplete: "off" %></div>
+						    <%= f.password_field :password, autocomplete: "off", :class => "form-control"  %></div>
 
 						  <% if devise_mapping.rememberable? -%>
 						    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
 						  <% end -%>
 
-						  <div><%= f.submit "Sign in" %></div>
+						  <div><%= f.submit "Sign in", :class => 'btn btn-primary' %></div>
 						<% end %>
 
-            </div><!--/span-->
-           
+           		 </div><!--/span-->
+           	</div>
         </div>
 </div>
 

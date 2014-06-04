@@ -1,28 +1,39 @@
   <div class="container-fluid">
     <div class="row">
 
-      <div class="col-xs-12 col-sm-12">
-            <div class="jumbotron">
-              <a href="/"><img src="http://images.forbes.com/media/lists/companies/task-force-for-global-health_200x200.jpg" width="200" height="200" alt="Home"/></a>
-              <h1>API: Task Force for Global Health</h1>
-              <p>Welcome to the Task Force for Global Health API. This tool is intended to faclitate in getting vital  information to caregivers about each location visited and streamline the process of adding important data for future vists.</p>
+          <div class="col-xs-12 col-sm-12">
+              <div class="row bottom-border">
+                <div class="col-xs-9 col-sm-9">
+                  <div class="jumbotron intro">
+                      <h2>Demo: Task Force for Global Health API</h2>
+                      <p>This is a demonstration site to show some applications for the Task Force for Global Health's API.</p>
+                      <p><a class="btn btn-primary" href="api/index" role="button">View data &raquo;</a></p>
+                    </div>
+                  </div>
+                   <div class="col-xs-3 col-sm-3">
+                      <a href="/"><img src="http://images.forbes.com/media/lists/companies/task-force-for-global-health_200x200.jpg" width="200" height="200" alt="Home"/></a> 
+                   </div>
             </div>
             <div class="row">
-              <div class="col-sm-3 col-lg-3">
-                <h2>Show Districts</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p><a class="btn btn-primary" href="api/index" role="button">Show &raquo;</a></p>
+              <div class="col-sm-4 col-lg-4">
+                <h2>Map Districts</h2>
+                <hr/>
+                <p>Districts and regions of Ghana and Burkina Faso represented on a Gogogle map.</p>
+                <p><a class="btn btn-primary" href="pages/maps" role="button">Show Map &raquo;</a></p>
               </div><!--/span-->
-              <div class="col-sm-3 col-lg-43">
+              <div class="col-sm-4 col-lg-4">
                 <h2>Ghana Districts</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p><a class="btn btn-primary" href="/districts?country=ghana" role="button">Update &raquo;</a></p>
+                <hr/>
+                <p>An administrator tool that allows an authenticated user to update data for Ghana's districts. </p>
+                <p><a class="btn btn-danger" href="/districts?country=ghana" role="button">Update Data &raquo;</a></p>
               </div>
 
-               <div class="col-sm-3 col-lg-43">
+               <div class="col-sm-4 col-lg-4">
                 <h2>Burkina Faso Districts</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p><a class="btn btn-primary" href="/districts?country=Burkina%20Faso" role="button">Update &raquo;</a></p>
+                <hr/>
+                 <p>An administrator tool that allows an authenticated user to update data for Burkina Faso's districts. </p>
+
+                <p><a class="btn btn-danger" href="/districts?country=Burkina%20Faso" role="button">Update Data &raquo;</a></p>
               </div>
           </div>
      </div>

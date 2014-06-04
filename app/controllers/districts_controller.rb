@@ -6,7 +6,6 @@ class DistrictsController < ApplicationController
   # GET /districts
   # GET /districts.json
   def index
-    # @districts = District.all
     @country = params[:country].titleize
     @districts = District.where(:country => @country)
   end
